@@ -5,6 +5,8 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    showmask: false,
+    screenwidth: document.body.clientWidth,
     user: {
       name: 'username',
       number: '14',
@@ -29,6 +31,16 @@ export default new Vuex.Store({
           alert('Over');
         }
       }
+    },
+    showMaskHandler(state) {
+      if (state.showmask === true) {
+        state.showmask = false;
+      } else {
+        state.showmask = true;
+      }
+    },
+    closeMaskHandler(state) {
+      state.showmask = false;
     },
   },
   actions: {

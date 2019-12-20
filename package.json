@@ -1,5 +1,5 @@
 {
-  "name": "test1202",
+  "name": "profile",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -23,18 +23,8 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "lint-staged": "^9.4.3",
-    "node-sass": "^4.13.0",
+    "sass": "^1.23.7",
     "sass-loader": "^8.0.0",
     "vue-template-compiler": "^2.6.10"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,vue}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
   }
 }

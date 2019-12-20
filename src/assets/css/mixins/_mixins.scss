@@ -1,0 +1,33 @@
+@import "../base/variable";
+@import "../function/function";
+
+@mixin elli($n:1) {
+    @extend %elli;
+    -webkit-line-clamp: $n;
+}
+
+@mixin font($line_height,$font_size,$color) {
+    line-height: $line_height;
+    font-size: $font_size;
+    color: $color;
+};
+
+@mixin media_query($a) {
+    @if $a == sm {
+        @media all and (max-width:576px){
+            @content;
+        }
+    }@else if $a == md {
+        @media all and (max-width:768px){
+            @content;
+        }
+    }@else if $a == lg {
+        @media all and (max-width:1200px){
+            @content;
+        }
+    }@else{
+        @media all and (max-width:#{$a}px){
+            @content;
+        }
+    };
+}

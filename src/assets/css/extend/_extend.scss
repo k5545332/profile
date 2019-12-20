@@ -1,0 +1,61 @@
+@import "../base/variable";
+@import "../function/function";
+
+%elli{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+@media all and (max-width:576px){
+    %ellinone{
+        overflow: initial;
+        text-overflow: initial;
+        display: initial;
+        -webkit-box-orient: initial;
+        -webkit-line-clamp: initial;
+    }
+}
+%section_margin_top{
+    margin-top: times(5); 
+}
+%clearfix{
+    &::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+%all_zero_absolute_center{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+%transform_absolute_center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+%flex_all_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+%burger_line{
+    content: "";
+    position: relative;
+    width: 100%;
+    height: $limit_line_height;
+    background: map-get($color,sub);
+    transform-origin: center;
+    transform: rotate(0deg);
+    display: block;
+    transition: .3s;
+}
+

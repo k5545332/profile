@@ -18,16 +18,16 @@ const routes = [{
   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
 },
 {
-  path: '/test',
-  name: 'test',
-  beforeEnter(to, from, next) {
-    if (window.confirm('enter test')) {
-      next();
-    } else {
-      next('/');
-    }
-  },
-  component: () => import(/* webpackChunkName: "test" */ '../views/Test.vue'),
+  path: '/example',
+  name: 'example',
+  // beforeEnter(to, from, next) {
+  //   if (window.confirm('enter test')) {
+  //     next();
+  //   } else {
+  //     next('/');
+  //   }
+  // },
+  component: () => import(/* webpackChunkName: "example" */ '../views/Example.vue'),
 },
 {
   path: '*',

@@ -1,0 +1,5 @@
+@import "../base/variable";
+
+@function times($n,$unit:px,$gutter_num:$gutter_num) {
+    @return $n*$gutter_num + #{$unit};
+}
