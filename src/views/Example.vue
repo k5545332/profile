@@ -1,5 +1,6 @@
 <template>
   <div class="example">
+    <Carsoul />
     <PageHeader />
   </div>
 </template>
@@ -7,11 +8,13 @@
 <script>
 // @ is an alias to /src
 import PageHeader from '@/components/Header.vue';
+import Carsoul from '@/components/Carsoul.vue';
 
 export default {
   name: 'Example',
   components: {
     PageHeader,
+    Carsoul,
   },
 };
 </script>
