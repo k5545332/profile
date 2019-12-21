@@ -52,6 +52,9 @@ export default {
     this.slider();
     this.setTime();
   },
+  destroyed() {
+    this.closeTime();
+  },
   methods: {
     directChangeIndex(direct) {
       this.index += direct;
