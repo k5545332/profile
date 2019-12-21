@@ -85,6 +85,9 @@ export default {
       clearInterval(this.timer);
     },
   },
+  destroyed() {
+    this.closeTime();
+  },
 };
 </script>
 <style lang="scss">
