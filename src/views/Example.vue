@@ -2,6 +2,7 @@
   <div class="example">
     <Carsoul />
     <PageHeader />
+    <ColCards />
   </div>
 </template>
 
@@ -9,12 +10,14 @@
 // @ is an alias to /src
 import PageHeader from '@/components/Header.vue';
 import Carsoul from '@/components/Carsoul.vue';
+import ColCards from '@/components/ColCards.vue';
 
 export default {
   name: 'Example',
   components: {
     PageHeader,
     Carsoul,
+    ColCards,
   },
 };
 </script>
