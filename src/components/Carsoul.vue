@@ -52,6 +52,9 @@ export default {
     this.slider();
     this.setTime();
   },
+  destroyed() {
+    this.closeTime();
+  },
   methods: {
     directChangeIndex(direct) {
       this.index += direct;
@@ -84,9 +87,6 @@ export default {
     closeTime() {
       clearInterval(this.timer);
     },
-  },
-  destroyed() {
-    this.closeTime();
   },
 };
 </script>
