@@ -4,10 +4,16 @@
       <Card
         class="col-lg-6 col-6 col-md-12 col-sm-24"
       >
-        <h3 slot="title">
+        <h3
+          slot="title"
+          class="title"
+        >
           Zelda
         </h3>
-        <p slot="des">
+        <p
+          slot="des1"
+          class="content"
+        >
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
           simply dummy text of the printing and typesetting industry.
         </p>
@@ -15,10 +21,16 @@
       <Card
         class="col-lg-6 col-6 col-md-12 col-sm-24"
       >
-        <h3 slot="title">
+        <h3
+          slot="title"
+          class="title"
+        >
           Persona 5
         </h3>
-        <p slot="des">
+        <p
+          slot="des1"
+          class="content"
+        >
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
           simply dummy text of the printing and typesetting industry.
         </p>
@@ -26,10 +38,16 @@
       <Card
         class="col-lg-6 col-6 col-md-12 col-sm-24"
       >
-        <h3 slot="title">
+        <h3
+          slot="title"
+          class="title"
+        >
           DQ11
         </h3>
-        <p slot="des">
+        <p
+          slot="des1"
+          class="content"
+        >
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
           simply dummy text of the printing and typesetting industry.
         </p>
@@ -37,10 +55,16 @@
       <Card
         class="col-lg-6 col-6 col-md-12 col-sm-24"
       >
-        <h3 slot="title">
+        <h3
+          slot="title"
+          class="title"
+        >
           RDR2
         </h3>
-        <p slot="des">
+        <p
+          slot="des1"
+          class="content"
+        >
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
           simply dummy text of the printing and typesetting industry.
         </p>
