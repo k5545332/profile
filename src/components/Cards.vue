@@ -4,8 +4,15 @@
   >
     <div class="pic" />
     <div class="des">
-      <slot name="title" />
-      <slot name="des" />
+      <slot
+        name="title"
+      />
+      <slot
+        name="des1"
+      />
+      <slot
+        name="des2"
+      />
     </div>
   </div>
 </template>
@@ -22,6 +29,17 @@ export default {
     .pic{
         height: 0;
         padding-top: 75%;
+    }
+    .title{
+        margin-top: times(1);
+    }
+    .content{
+        margin-top: times(1);
+        @include elli(3);
+        @extend %ellinone;
+    }
+    .big_content{
+      margin-top: times(1);
     }
 }
 </style>
