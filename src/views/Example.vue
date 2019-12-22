@@ -172,6 +172,7 @@
         </Card>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -183,6 +184,7 @@ import ColCards from '@/components/ColCards.vue';
 import OneSection from '@/components/OneSection.vue';
 import Card from '@/components/Cards.vue';
 import Table from '@/components/Table.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
   name: 'Example',
@@ -193,6 +195,7 @@ export default {
     OneSection,
     Card,
     Table,
+    Footer,
   },
 };
 </script>
