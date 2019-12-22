@@ -103,6 +103,7 @@
         </Card>
       </div>
     </div>
+    <Table />
     <div class="sidebysidecard sidebysidecard_sec">
       <div class="container grid_container">
         <div
@@ -181,6 +182,7 @@ import Carsoul from '@/components/Carsoul.vue';
 import ColCards from '@/components/ColCards.vue';
 import OneSection from '@/components/OneSection.vue';
 import Card from '@/components/Cards.vue';
+import Table from '@/components/Table.vue';
 
 export default {
   name: 'Example',
@@ -190,6 +192,7 @@ export default {
     ColCards,
     OneSection,
     Card,
+    Table,
   },
 };
 </script>
