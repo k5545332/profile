@@ -12,7 +12,7 @@ export default {
   data() {
     return {
       text: 'WELCOME',
-      timenum: 2,
+      timenum: 2.5,
       timer: null,
     };
   },
@@ -25,11 +25,11 @@ export default {
   methods: {
     setTime() {
       this.timer = setInterval(() => {
-        this.timenum -= 1;
+        this.timenum -= 0.5;
         if (this.timenum === 0) {
           this.$router.push('example');
         }
-      }, 1000);
+      }, 500);
     },
     closeTime() {
       clearInterval(this.timer);
@@ -40,27 +40,38 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/css/style.scss';
 .home{
+  position: relative;
   width: 100vw;
   height: 100vh;
-  background: map-get($color,main);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  animation: opacity 3s;
+  animation: bgcolor 3s forwards;
 }
 p{
-  color: map-get($color,light);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   font-size: 64px;
   line-height: 1.5;
-  animation: opacity 3s;
+  animation: color 2.5s forwards;
 }
-@keyframes opacity {
-  from {
-    opacity: 1;
+
+@keyframes bgcolor {
+  0% {
+    background: map-get($color,main);
   }
-  to{
-    opacity: 0;
+  25% {
+    background: map-get($color,main);
+  }
+  100%{
+    background: map-get($color,light);
+  }
+}
+@keyframes color {
+  0% {
+    color: map-get($color,light);
+    }
+  100%{
+    color: map-get($color,main);
   }
 }
 

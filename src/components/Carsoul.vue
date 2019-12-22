@@ -8,6 +8,7 @@
       <div
         v-for="(item,index) in items"
         :key="index"
+        :style="{ backgroundImage: 'url('+require('../assets/'+item)+')' }"
         class="carsoul_item"
       />
       <div
@@ -44,6 +45,7 @@ export default {
         '1.jpg',
         '2.jpg',
         '3.jpg',
+        '4.jpg',
       ],
       timer: null,
     };
@@ -104,14 +106,8 @@ export default {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 50% 50%;
-        &:nth-child(1){
-            background-image: url("../assets/1.jpg");
-        }
-        &:nth-child(2){
-            background-image: url("../assets/2.jpg");
-        }
-        &:nth-child(3){
-            background-image: url("../assets/3.jpg");
+        @include media_query(md){
+          padding-top: 50%;
         }
     }
     .prev{

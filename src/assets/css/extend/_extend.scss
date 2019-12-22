@@ -16,6 +16,15 @@
         -webkit-line-clamp: initial;
     }
 }
+@media all and (max-width:768px){
+    %ellinonemd{
+        overflow: initial;
+        text-overflow: initial;
+        display: initial;
+        -webkit-box-orient: initial;
+        -webkit-line-clamp: initial;
+    }
+}
 %section_margin_top{
     margin-top: times(5); 
 }

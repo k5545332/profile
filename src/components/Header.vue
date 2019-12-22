@@ -48,6 +48,7 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/css/style.scss';
 header{
+  width: 100%;
   height: $header_height;
   background: map-get($color,main);
   z-index: 10;
@@ -56,7 +57,7 @@ header{
       height: $header_height_md;
       position: fixed;
       top: 0;
-      width: 100%;
+      left: 0;
   }
   >.container{
       height: 100%;

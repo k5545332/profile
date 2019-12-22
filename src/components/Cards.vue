@@ -1,6 +1,8 @@
 <template>
-  <div
+  <a
+    :href="`${link}`"
     class="card"
+    target="_blank"
   >
     <div
       class="pic"
@@ -17,13 +19,17 @@
         name="des2"
       />
     </div>
-  </div>
+  </a>
 </template>
 
 <script>
 export default {
   name: 'Card',
   props: {
+    link: {
+      type: String,
+      required: true,
+    },
     image: {
       type: String,
       required: true,
