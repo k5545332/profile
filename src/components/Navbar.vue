@@ -4,9 +4,9 @@
     @click="closeNav"
   >
     <div class="content">
-      <router-link to="/about">
+      <!-- <router-link to="/about">
         {{ pagename1 }}
-      </router-link> |
+      </router-link> | -->
       <router-link :to="{name:'example'}">
         {{ pagename2 }}
       </router-link>
