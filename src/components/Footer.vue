@@ -5,19 +5,25 @@
         <div class="groups col-lg-12 col-sm-24">
           <h3>{{ title }}</h3>
           <div class="card_group">
-            <Card>
+            <Card
+              :image="items[0].image"
+            >
               <p slot="des1">
-                {{ text }}
+                {{ items[0].des }}
               </p>
             </Card>
-            <Card>
+            <Card
+              :image="items[1].image"
+            >
               <p slot="des1">
-                {{ text }}
+                {{ items[1].des }}
               </p>
             </Card>
-            <Card>
+            <Card
+              :image="items[2].image"
+            >
               <p slot="des1">
-                {{ text }}
+                {{ items[2].des }}
               </p>
             </Card>
           </div>
@@ -25,40 +31,49 @@
         <div class="groups col-lg-12 col-sm-24">
           <h3>{{ title }}</h3>
           <div class="card_group">
-            <Card>
+            <Card
+              :image="items[0].image"
+            >
               <p slot="des1">
-                {{ text }}
+                {{ items[0].des }}
               </p>
             </Card>
-            <Card>
+            <Card
+              :image="items[1].image"
+            >
               <p slot="des1">
-                {{ text }}
+                {{ items[1].des }}
               </p>
             </Card>
-            <Card>
+            <Card
+              :image="items[2].image"
+            >
               <p slot="des1">
-                {{ text }}
+                {{ items[2].des }}
               </p>
             </Card>
           </div>
         </div>
       </div>
-      <Card class="big_card col-lg-8 col-md-24">
+      <Card
+        :image="items[0].image"
+        class="big_card col-lg-8 col-md-24"
+      >
         <p
           slot="des1"
           class="big_content"
         >
-          {{ text }}
-          {{ text }}
+          {{ items[0].des }}
+          {{ items[0].des }}
         </p>
         <p
           slot="des2"
           class="big_content"
         >
-          {{ text }}
-          {{ text }}
-          {{ text }}
-          {{ text }}
+          {{ items[0].des }}
+          {{ items[0].des }}
+          {{ items[0].des }}
+          {{ items[0].des }}
         </p>
       </Card>
     </div>
@@ -75,9 +90,33 @@ export default {
   },
   data() {
     return {
-      title: 'Title H3',
-      text: ` Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Ratione quisquam omnis quam eaa, dolorem doloribus`,
+      title: 'Items',
+      items: [
+        {
+          name: 'Zelda',
+          des: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
+          simply dummy text of the printing and typesetting industry.`,
+          image: '1.jpg',
+        },
+        {
+          name: 'Persona 5',
+          des: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
+          simply dummy text of the printing and typesetting industry.`,
+          image: '2.jpg',
+        },
+        {
+          name: 'DQ11',
+          des: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
+          simply dummy text of the printing and typesetting industry.`,
+          image: '3.jpg',
+        },
+        {
+          name: 'RDR2',
+          des: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
+          simply dummy text of the printing and typesetting industry.`,
+          image: '4.jpg',
+        },
+      ],
     };
   },
 };
@@ -107,48 +146,9 @@ footer{
         @extend %ellinone;
       }
     }
-    &:nth-child(1){
-      .card{
-        &:nth-child(1){
-          .pic{
-            background: url("../assets/1.jpg") no-repeat 50% 50% / cover;
-          }
-        }
-        &:nth-child(2){
-          .pic{
-            background: url("../assets/2.jpg") no-repeat 50% 50% / cover;
-          }
-        }
-        &:nth-child(3){
-          .pic{
-            background: url("../assets/3.jpg") no-repeat 50% 50% / cover;
-          }
-        }
-      }
-    }
-    &:nth-child(2){
-      .card{
-        &:nth-child(1){
-          .pic{
-            background: url("../assets/1.jpg") no-repeat 50% 50% / cover;
-          }
-        }
-        &:nth-child(2){
-          .pic{
-            background: url("../assets/2.jpg") no-repeat 50% 50% / cover;
-          }
-        }
-        &:nth-child(3){
-          .pic{
-            background: url("../assets/3.jpg") no-repeat 50% 50% / cover;
-          }
-        }
-      }
-    }
   }
   .big_card{
     .pic{
-      background: url("../assets/1.jpg") no-repeat 50% 50% / cover;
       margin-top: times(2);
     }
   }

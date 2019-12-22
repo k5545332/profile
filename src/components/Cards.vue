@@ -2,7 +2,10 @@
   <div
     class="card"
   >
-    <div class="pic" />
+    <div
+      class="pic"
+      :style="{ backgroundImage: 'url('+require('../assets/'+image)+')' }"
+    />
     <div class="des">
       <slot
         name="title"
@@ -20,7 +23,12 @@
 <script>
 export default {
   name: 'Card',
-
+  props: {
+    image: {
+      type: String,
+      required: true,
+    },
+  },
 };
 </script>
 <style lang="scss">
@@ -29,6 +37,9 @@ export default {
     .pic{
         height: 0;
         padding-top: 75%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
     }
     .title{
         margin-top: times(1);

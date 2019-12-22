@@ -4,7 +4,7 @@
       <div class="logo">
         <router-link to="/">
           <h1>
-            Profile
+            {{ websitename }}
           </h1>
         </router-link>
       </div>
@@ -29,6 +29,11 @@ export default {
   name: 'PageHeader',
   components: {
     Navbar,
+  },
+  data() {
+    return {
+      websitename: 'Profile',
+    };
   },
   methods: {
     ...mapMutations(['showMaskHandler']),

@@ -5,10 +5,10 @@
         <thead>
           <TheadTr>
             <th slot="th1">
-              Title
+              {{ th1 }}
             </th>
             <th slot="th2">
-              Content
+              {{ th2 }}
             </th>
           </TheadTr>
         </thead>
@@ -22,12 +22,12 @@
                 <h3
                   slot="td1-1-1"
                 >
-                  Title A
+                  {{ title1 }}
                 </h3>
                 <span
                   slot="td1-1-2"
                 >
-                  Great!
+                  {{ title2 }}
                 </span>
               </div>
             </td>
@@ -39,32 +39,12 @@
                 <p
                   slot="td2-1-1"
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Adipisci, architecto.
-                  Magnam explicabo quas, temporibus optio quibusdam distinctio
-                  aliquam voluptatum
-                  dolorum ratione nesciunt officiis, omnis, blanditiis illum
-                  voluptate dicta
-                  facilis quaerat.
-                  Earum, adipisci sequi blanditiis ipsam, recusandae nostrum
-                  explicabo eaque
-                  expedita, ullam quae atque. Consequatur, ab! Unde quasi illo
-                  laboriosam, at
-                  dicta tempora, sapiente soluta, eligendi omnis exercitationem
-                  enim. Cupiditate,
-                  facilis?
-                  Sint suscipit obcaecati iste, laborum, ipsum, aliquid
-                  repellendus provident
-                  doloremque exercitationem rem ab fugiat qui et quasi quae quas
-                  consequuntur.
-                  Corrupti impedit sed fugiat quidem quibusdam quis, expedita
-                  voluptatibus
-                  doloribus.
+                  {{ content }}{{ content }}{{ content }}
                 </p>
                 <p
                   slot="td2-1-2"
                 >
-                  GO
+                  {{ linktext }}
                 </p>
               </div>
             </td>
@@ -78,12 +58,12 @@
                 <h3
                   slot="td1-1-1"
                 >
-                  Title A
+                  {{ title1 }}
                 </h3>
                 <span
                   slot="td1-1-2"
                 >
-                  Great!
+                  {{ title2 }}
                 </span>
               </div>
             </td>
@@ -95,32 +75,12 @@
                 <p
                   slot="td2-1-1"
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Adipisci, architecto.
-                  Magnam explicabo quas, temporibus optio quibusdam distinctio
-                  aliquam voluptatum
-                  dolorum ratione nesciunt officiis, omnis, blanditiis illum
-                  voluptate dicta
-                  facilis quaerat.
-                  Earum, adipisci sequi blanditiis ipsam, recusandae nostrum
-                  explicabo eaque
-                  expedita, ullam quae atque. Consequatur, ab! Unde quasi illo
-                  laboriosam, at
-                  dicta tempora, sapiente soluta, eligendi omnis exercitationem
-                  enim. Cupiditate,
-                  facilis?
-                  Sint suscipit obcaecati iste, laborum, ipsum, aliquid
-                  repellendus provident
-                  doloremque exercitationem rem ab fugiat qui et quasi quae quas
-                  consequuntur.
-                  Corrupti impedit sed fugiat quidem quibusdam quis, expedita
-                  voluptatibus
-                  doloribus.
+                  {{ content }}{{ content }}{{ content }}
                 </p>
                 <p
                   slot="td2-1-2"
                 >
-                  GO
+                  {{ linktext }}
                 </p>
               </div>
             </td>
@@ -134,12 +94,12 @@
                 <h3
                   slot="td1-1-1"
                 >
-                  Title A
+                  {{ title1 }}
                 </h3>
                 <span
                   slot="td1-1-2"
                 >
-                  Great!
+                  {{ title2 }}
                 </span>
               </div>
             </td>
@@ -151,32 +111,12 @@
                 <p
                   slot="td2-1-1"
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Adipisci, architecto.
-                  Magnam explicabo quas, temporibus optio quibusdam distinctio
-                  aliquam voluptatum
-                  dolorum ratione nesciunt officiis, omnis, blanditiis illum
-                  voluptate dicta
-                  facilis quaerat.
-                  Earum, adipisci sequi blanditiis ipsam, recusandae nostrum
-                  explicabo eaque
-                  expedita, ullam quae atque. Consequatur, ab! Unde quasi illo
-                  laboriosam, at
-                  dicta tempora, sapiente soluta, eligendi omnis exercitationem
-                  enim. Cupiditate,
-                  facilis?
-                  Sint suscipit obcaecati iste, laborum, ipsum, aliquid
-                  repellendus provident
-                  doloremque exercitationem rem ab fugiat qui et quasi quae quas
-                  consequuntur.
-                  Corrupti impedit sed fugiat quidem quibusdam quis, expedita
-                  voluptatibus
-                  doloribus.
+                  {{ content }}{{ content }}{{ content }}
                 </p>
                 <p
                   slot="td2-1-2"
                 >
-                  GO
+                  {{ linktext }}
                 </p>
               </div>
             </td>
@@ -196,6 +136,19 @@ export default {
   components: {
     TheadTr,
     TbodyTr,
+  },
+  data() {
+    return {
+      th1: 'title',
+      th2: 'content',
+      title1: 'Title A',
+      title2: 'Great!',
+      content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Praesentium, unde. Quas nostrum provident fuga maiores porro quod optio, 
+      molestias rerum ipsam quaerat magnam omnis eaque repudiandae esse 
+      excepturi? Sequi, natus!`,
+      linktext: 'GO',
+    };
   },
 };
 </script>
@@ -246,7 +199,7 @@ table{
         position: relative;
         @include media_query(md){
           &::before{
-            content: "Title";
+            content: "title";
           }
         }
       }

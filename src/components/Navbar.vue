@@ -5,10 +5,10 @@
   >
     <div class="content">
       <router-link to="/about">
-        About
+        {{ pagename1 }}
       </router-link> |
       <router-link :to="{name:'example'}">
-        Example
+        {{ pagename2 }}
       </router-link>
     </div>
   </div>
@@ -20,6 +20,12 @@ import Vue from 'vue';
 
 export default Vue.extend({
   name: 'Navbar',
+  data() {
+    return {
+      pagename1: 'About',
+      pagename2: 'Example',
+    };
+  },
   methods: {
     ...mapMutations(['closeMaskHandler']),
     closeNav() {

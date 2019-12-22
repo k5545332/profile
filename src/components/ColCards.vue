@@ -3,70 +3,70 @@
     <div class="container grid_container">
       <Card
         class="col-lg-6 col-6 col-md-12 col-sm-24"
+        :image="items[0].image"
       >
         <h3
           slot="title"
           class="title"
         >
-          Zelda
+          {{ items[0].name }}
         </h3>
         <p
           slot="des1"
           class="content"
         >
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
-          simply dummy text of the printing and typesetting industry.
+          {{ items[0].des }}
         </p>
       </Card>
       <Card
         class="col-lg-6 col-6 col-md-12 col-sm-24"
+        :image="items[1].image"
       >
         <h3
           slot="title"
           class="title"
         >
-          Persona 5
+          {{ items[1].name }}
         </h3>
         <p
           slot="des1"
           class="content"
         >
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
-          simply dummy text of the printing and typesetting industry.
+          {{ items[1].des }}
         </p>
       </Card>
       <Card
         class="col-lg-6 col-6 col-md-12 col-sm-24"
+        :image="items[2].image"
       >
         <h3
           slot="title"
           class="title"
         >
-          DQ11
+          {{ items[2].name }}
         </h3>
         <p
           slot="des1"
           class="content"
         >
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
-          simply dummy text of the printing and typesetting industry.
+          {{ items[2].des }}
         </p>
       </Card>
       <Card
         class="col-lg-6 col-6 col-md-12 col-sm-24"
+        :image="items[3].image"
       >
         <h3
           slot="title"
           class="title"
         >
-          RDR2
+          {{ items[3].name }}
         </h3>
         <p
           slot="des1"
           class="content"
         >
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
-          simply dummy text of the printing and typesetting industry.
+          {{ items[3].des }}
         </p>
       </Card>
     </div>
@@ -81,6 +81,36 @@ export default {
   components: {
     Card,
   },
+  data() {
+    return {
+      items: [
+        {
+          name: 'Zelda',
+          des: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
+          simply dummy text of the printing and typesetting industry.`,
+          image: '1.jpg',
+        },
+        {
+          name: 'Persona 5',
+          des: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
+          simply dummy text of the printing and typesetting industry.`,
+          image: '2.jpg',
+        },
+        {
+          name: 'DQ11',
+          des: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
+          simply dummy text of the printing and typesetting industry.`,
+          image: '3.jpg',
+        },
+        {
+          name: 'RDR2',
+          des: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
+          simply dummy text of the printing and typesetting industry.`,
+          image: '4.jpg',
+        },
+      ],
+    };
+  },
 };
 
 </script>
@@ -89,27 +119,5 @@ export default {
 @import '@/assets/css/style.scss';
 .colcards{
     @extend %section_margin_top;
-    .card{
-        &:nth-child(1){
-            .pic{
-                background: url("../assets/1.jpg") no-repeat 50% 50% / cover;
-            }
-        }
-        &:nth-child(2){
-            .pic{
-                background: url("../assets/2.jpg") no-repeat 50% 50% / cover;
-            }
-        }
-        &:nth-child(3){
-            .pic{
-                background: url("../assets/3.jpg") no-repeat 50% 50% / cover;
-            }
-        }
-        &:nth-child(4){
-            .pic{
-                background: url("../assets/4.jpg") no-repeat 50% 50% / cover;
-            }
-        }
-    }
 }
 </style>
