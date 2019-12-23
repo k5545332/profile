@@ -238,7 +238,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/css/style.scss';
+
 .example{
     background: map-get($color,bg);
 }

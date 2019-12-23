@@ -201,7 +201,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import '@/assets/css/style.scss';
+
 table{
   @extend %section_margin_top;
   tr,th,td{

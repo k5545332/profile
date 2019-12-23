@@ -93,7 +93,6 @@ export default {
 };
 </script>
 <style lang="scss">
-@import '@/assets/css/style.scss';
 .kv{
     >.carsoul_container{
         position: relative;

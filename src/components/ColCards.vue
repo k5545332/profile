@@ -126,7 +126,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/css/style.scss';
 .colcards{
     @extend %section_margin_top;
 }

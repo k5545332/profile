@@ -135,7 +135,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/css/style.scss';
 footer{
   @extend %section_margin_top;
   padding: times(3) 0;

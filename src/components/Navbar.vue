@@ -36,7 +36,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/css/style.scss';
+
 #nav{
   font-size: 0;
   @include media_query(md){

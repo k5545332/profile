@@ -16,7 +16,7 @@ export default {
 
 </script>
 <style lang="scss">
-@import '@/assets/css/style.scss';
+
 .onesection{
     @extend %section_margin_top;
 }

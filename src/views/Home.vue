@@ -38,7 +38,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import '@/assets/css/style.scss';
+
 .home{
   position: relative;
   width: 100vw;
