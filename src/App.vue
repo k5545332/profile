@@ -38,7 +38,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/css/app.scss';
 body {
     overflow-x: auto;
     min-width: 320px;
