@@ -1,5 +1,7 @@
 <template>
-  <div class="example">
+  <div
+    :class="{example:true, scroll:scrollontop}"
+  >
     <Carsoul />
     <PageHeader />
     <ColCards />
@@ -211,7 +213,26 @@ export default {
           link: 'https://reurl.cc/VaZXRb',
         },
       ],
+      scrollontop: false,
     };
+  },
+  mounted() {
+    this.scrollHandler();
+  },
+  methods: {
+    scrollHandler() {
+      window.addEventListener('scroll', this.scrollCheck);
+    },
+    scrollCheck() {
+      const kv = document.querySelector('.kv');
+      const { height } = kv.getBoundingClientRect();
+
+      if (window.scrollY >= height) {
+        this.scrollontop = true;
+      } else {
+        this.scrollontop = false;
+      }
+    },
   },
 };
 </script>
