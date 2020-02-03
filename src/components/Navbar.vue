@@ -10,6 +10,14 @@
       <router-link :to="{name:'example'}">
         {{ pagename2 }}
       </router-link>
+      <a
+        href="https://reurl.cc/bLLzo"
+        target="_blank"
+      >{{ pagename3 }}</a>
+      <a
+        href="https://reurl.cc/mVVq9"
+        target="_blank"
+      >{{ pagename4 }}</a>
     </div>
   </div>
 </template>
@@ -23,7 +31,10 @@ export default Vue.extend({
   data() {
     return {
       pagename1: 'About',
-      pagename2: 'Example',
+      pagename2: 'Vue',
+      pagename3: 'CHOCOLINE',
+      pagename4: '鯨魚3c',
+
     };
   },
   methods: {
